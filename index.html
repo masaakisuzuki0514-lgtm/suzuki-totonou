@@ -3,655 +3,890 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ととのう。| 静岡市葵区の隠れ家リラクゼーションサロン</title>
-<meta name="description" content="静岡市葵区瀬名川のリラクゼーションサロン「ととのう。」。最終受付21時。当日・前日予約歓迎。もみほぐし・整体・エステで心と体をととのえる。">
+<title>ととのう。| 静岡市葵区のリラクゼーションサロン</title>
+<meta name="description" content="静岡市葵区瀬名川のリラクゼーションサロン「ととのう。」。10時〜22時営業（最終受付21時）。もみほぐし・整体・リンパで、心とからだをやわらかく、ととのえる。">
+<meta name="theme-color" content="#FFFAF5">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Noto+Serif+JP:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;500;700;900&family=M+PLUS+Rounded+1c:wght@400;500;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="icon" type="image/jpeg" href="images/logo.jpg">
 <style>
 /* ===== RESET ===== */
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
 body{
-  font-family:'Noto Serif JP',serif;
-  color:#2a2520;
-  background:#faf8f5;
-  line-height:1.9;
-  font-weight:400;
+  font-family:'Zen Maru Gothic','M PLUS Rounded 1c','Noto Sans JP',sans-serif;
+  color:#6B4D3A;
+  background:#FFFAF5;
+  line-height:1.85;
+  font-weight:500;
+  font-size:17px;
   -webkit-font-smoothing:antialiased;
   font-feature-settings:"palt";
+  overflow-x:hidden;
 }
 img{max-width:100%;display:block}
-a{color:inherit;text-decoration:none;transition:opacity .3s}
+a{color:inherit;text-decoration:none;transition:opacity .3s, color .3s}
 ul{list-style:none}
 button{font-family:inherit;cursor:pointer;border:none;background:none}
 
 /* ===== VARIABLES ===== */
 :root{
-  --dark:#1a1a1a;
-  --dark-2:#2a2520;
-  --gold:#b8975a;
-  --gold-light:#d4b97a;
-  --gold-dark:#967640;
-  --cream:#faf8f5;
-  --cream-2:#f3eee5;
-  --line:#e5dfd2;
-  --text:#2a2520;
-  --text-soft:#6a6258;
-  --max:1200px;
+  --pink:#F5C0CB;
+  --pink-soft:#FAD9E0;
+  --yellow:#F5E6A8;
+  --yellow-soft:#FBF1C9;
+  --beige:#E8D5B7;
+  --beige-soft:#F2E5CE;
+  --lavender:#D5B8DC;
+  --lavender-soft:#E8D4EE;
+  --sage:#B8C97C;
+  --sage-dark:#9CAE5F;
+  --brown:#6B4D3A;
+  --brown-soft:#8B6F5C;
+  --brown-light:#A88B76;
+  --base:#FFFAF5;
+  --base-warm:#FFF4E8;
+  --shadow:0 8px 30px rgba(166,124,82,.12);
+  --shadow-soft:0 4px 16px rgba(166,124,82,.08);
+  --shadow-lg:0 16px 48px rgba(166,124,82,.18);
+  --radius:24px;
+  --radius-sm:16px;
+  --radius-lg:32px;
+  --max:1180px;
 }
-
-.en{font-family:'Cormorant Garamond',serif;letter-spacing:.08em;font-weight:400}
 
 /* ===== UTILS ===== */
 .wrap{max-width:var(--max);margin:0 auto;padding:0 24px}
-.section{padding:120px 0}
+.section{padding:110px 0;position:relative}
 .section-label{
-  display:block;font-size:13px;letter-spacing:.3em;
-  color:var(--gold);text-transform:uppercase;
-  margin-bottom:18px;text-align:center;
+  display:inline-block;
+  font-size:13px;letter-spacing:.25em;
+  color:var(--sage-dark);
+  margin-bottom:14px;font-weight:700;
+  text-align:center;
 }
+.section-label-wrap{text-align:center}
 .section-title{
-  font-size:38px;font-weight:500;text-align:center;
-  margin-bottom:64px;letter-spacing:.05em;color:var(--dark);
+  font-family:'Zen Maru Gothic',sans-serif;
+  font-size:36px;font-weight:700;text-align:center;
+  margin-bottom:18px;letter-spacing:.04em;
+  color:var(--brown);
+  line-height:1.5;
 }
-.section-title::after{
-  content:"";display:block;width:40px;height:1px;
-  background:var(--gold);margin:24px auto 0;
+.section-title .accent-pink{color:#E89AAB}
+.section-title .accent-sage{color:var(--sage-dark)}
+.section-sub{
+  text-align:center;
+  font-size:16px;
+  color:var(--brown-soft);
+  margin-bottom:60px;
+  line-height:1.9;
+}
+
+/* 装飾波線 */
+.wave-divider{
+  display:block;width:120px;height:14px;margin:8px auto 0;
 }
 
 /* ===== BUTTONS ===== */
 .btn{
-  display:inline-flex;align-items:center;justify-content:center;
-  padding:18px 44px;font-size:15px;letter-spacing:.15em;
-  border:1px solid transparent;transition:all .4s ease;
-  font-family:'Noto Serif JP',serif;font-weight:500;
+  display:inline-flex;align-items:center;justify-content:center;gap:8px;
+  padding:18px 38px;font-size:16px;letter-spacing:.05em;
+  border:2px solid transparent;
+  border-radius:999px;
+  transition:all .35s ease;
+  font-family:'Zen Maru Gothic',sans-serif;font-weight:700;
   min-height:56px;
+  cursor:pointer;
 }
-.btn-gold{background:var(--gold);color:#fff}
-.btn-gold:hover{background:var(--gold-dark);transform:translateY(-2px);box-shadow:0 8px 24px rgba(184,151,90,.35)}
-.btn-outline{border:1px solid var(--gold);color:var(--gold);background:transparent}
-.btn-outline:hover{background:var(--gold);color:#fff}
-.btn-outline-light{border:1px solid #fff;color:#fff;background:transparent}
-.btn-outline-light:hover{background:#fff;color:var(--dark)}
-.btn-line{background:#06C755;color:#fff}
-.btn-line:hover{background:#05b04c;transform:translateY(-2px);box-shadow:0 8px 24px rgba(6,199,85,.35)}
+.btn-primary{
+  background:var(--sage);color:#fff;
+  box-shadow:0 6px 18px rgba(184,201,124,.45);
+}
+.btn-primary:hover{background:var(--sage-dark);transform:translateY(-3px);box-shadow:0 10px 24px rgba(156,174,95,.5)}
+.btn-pink{
+  background:#E89AAB;color:#fff;
+  box-shadow:0 6px 18px rgba(232,154,171,.4);
+}
+.btn-pink:hover{background:#dc8398;transform:translateY(-3px);box-shadow:0 10px 24px rgba(232,154,171,.5)}
+.btn-outline{
+  background:#fff;
+  border:2px solid var(--sage);
+  color:var(--sage-dark);
+}
+.btn-outline:hover{background:var(--sage);color:#fff;transform:translateY(-3px)}
+.btn-tel{
+  background:var(--yellow);color:var(--brown);
+  box-shadow:0 6px 18px rgba(245,230,168,.6);
+}
+.btn-tel:hover{background:#EEDA8C;transform:translateY(-3px)}
 
 /* ===== HEADER ===== */
 .header{
   position:fixed;top:0;left:0;right:0;z-index:1000;
-  padding:14px 0;background:rgba(250,248,245,.9);
-  backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);
-  transition:all .4s ease;border-bottom:1px solid transparent;
+  padding:12px 0;
+  background:rgba(255,250,245,.92);
+  backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
+  transition:all .35s ease;
+  border-bottom:1px solid rgba(232,213,183,.4);
 }
 .header.scrolled{
-  background:rgba(26,26,26,.92);
-  border-bottom:1px solid rgba(184,151,90,.2);
+  background:rgba(255,250,245,.98);
+  box-shadow:0 4px 20px rgba(166,124,82,.08);
 }
-.header.scrolled .logo,
-.header.scrolled .nav a{color:#fff}
-.header.scrolled .logo .dot{color:var(--gold)}
-
 .header-inner{
   max-width:var(--max);margin:0 auto;padding:0 24px;
   display:flex;align-items:center;justify-content:space-between;gap:20px;
 }
-.logo{
-  display:flex;align-items:center;gap:12px;
-  font-size:30px;font-weight:600;letter-spacing:.05em;
-  color:var(--dark);transition:color .4s;line-height:1;
-  white-space:nowrap;flex-shrink:0;
-}
+.logo-link{display:flex;align-items:center;gap:12px}
 .logo-img{
   width:54px;height:54px;border-radius:50%;
-  background:url('images/logo.jpg') center/cover #fff;
-  flex-shrink:0;box-shadow:0 2px 8px rgba(0,0,0,.1);
-  border:2px solid #fff;
+  object-fit:cover;
+  box-shadow:0 4px 12px rgba(245,192,203,.4);
+  background:#fff;
 }
-.logo .dot{color:var(--gold)}
-.header.scrolled .logo-img{
-  border-color:rgba(255,255,255,.9);box-shadow:0 2px 12px rgba(184,151,90,.4);
+.logo-text{
+  font-family:'Zen Maru Gothic',sans-serif;
+  font-weight:900;font-size:22px;
+  color:var(--brown);
+  letter-spacing:.02em;
+  line-height:1;
 }
-@media(max-width:1100px){
-  .logo{font-size:24px}
-  .logo-img{width:46px;height:46px}
+.logo-text .dot{color:#E89AAB}
+.logo-sub{
+  font-size:11px;color:var(--brown-light);letter-spacing:.15em;
+  font-weight:500;margin-top:3px;
 }
-@media(max-width:600px){
-  .logo{font-size:22px;gap:8px}
-  .logo-img{width:40px;height:40px}
-}
-.nav{display:flex;align-items:center;gap:22px}
+.nav{display:flex;align-items:center;gap:6px}
 .nav a{
-  font-size:13px;color:var(--text);position:relative;
-  transition:color .3s;letter-spacing:.04em;white-space:nowrap;
+  font-size:15px;font-weight:700;
+  padding:8px 14px;border-radius:999px;
+  color:var(--brown);
 }
-@media(max-width:1200px){.nav{gap:16px}.nav a{font-size:12px}}
-.nav a::after{
-  content:"";position:absolute;left:50%;bottom:-6px;
-  width:0;height:1px;background:var(--gold);
-  transition:all .3s;transform:translateX(-50%);
-}
-.nav a:hover::after{width:100%}
-.nav a:hover{color:var(--gold)}
-.header.scrolled .nav a:hover{color:var(--gold-light)}
+.nav a:hover{background:var(--yellow-soft);color:var(--sage-dark)}
 .header-cta{
-  padding:12px 24px;background:var(--gold);color:#fff!important;
-  font-size:13px;letter-spacing:.1em;transition:all .3s;
+  background:var(--sage);color:#fff !important;
+  padding:11px 22px !important;
+  border-radius:999px;font-size:14px !important;
+  margin-left:8px;
+  box-shadow:0 4px 12px rgba(184,201,124,.4);
 }
-.header-cta:hover{background:var(--gold-dark)}
-.header-cta::after{display:none}
+.header-cta:hover{background:var(--sage-dark) !important}
 
-.menu-toggle{display:none;width:32px;height:24px;position:relative;z-index:1001}
+.menu-toggle{
+  display:none;
+  width:44px;height:44px;
+  flex-direction:column;justify-content:center;align-items:center;gap:5px;
+  border-radius:50%;background:var(--yellow-soft);
+}
 .menu-toggle span{
-  display:block;width:100%;height:1px;background:var(--dark);
-  position:absolute;left:0;transition:all .3s;
+  width:22px;height:2px;background:var(--brown);
+  border-radius:2px;transition:all .3s;
 }
-.menu-toggle span:nth-child(1){top:4px}
-.menu-toggle span:nth-child(2){top:12px}
-.menu-toggle span:nth-child(3){top:20px}
-.header.scrolled .menu-toggle span{background:#fff}
-.menu-toggle.open span:nth-child(1){top:12px;transform:rotate(45deg)}
+.menu-toggle.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
 .menu-toggle.open span:nth-child(2){opacity:0}
-.menu-toggle.open span:nth-child(3){top:12px;transform:rotate(-45deg)}
-
-@media(max-width:900px){
-  .menu-toggle{display:block}
-  .nav{
-    position:fixed;top:0;right:-100%;width:80%;max-width:360px;height:100vh;
-    background:var(--dark);flex-direction:column;justify-content:center;
-    gap:28px;transition:right .4s ease;padding:40px;
-  }
-  .nav.open{right:0}
-  .nav a{color:#fff;font-size:18px}
-  .header.scrolled .nav a{color:#fff}
-  .header-cta{display:none}
-  .nav .header-cta{display:inline-flex;margin-top:20px}
-}
+.menu-toggle.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
 
 /* ===== HERO ===== */
 .hero{
-  min-height:100vh;position:relative;overflow:hidden;
+  position:relative;
+  min-height:100vh;
   display:flex;align-items:center;justify-content:center;
-  background:#1a1a1a;
-  color:#fff;text-align:center;padding:120px 24px 80px;
+  padding:120px 24px 80px;
+  overflow:hidden;
+  background:
+    radial-gradient(ellipse at top left, rgba(245,192,203,.35), transparent 50%),
+    radial-gradient(ellipse at bottom right, rgba(184,201,124,.25), transparent 55%),
+    radial-gradient(ellipse at center, rgba(245,230,168,.2), transparent 60%),
+    var(--base);
 }
-.hero-bg{
-  position:absolute;inset:0;z-index:0;
+.hero-blob{
+  position:absolute;border-radius:50%;filter:blur(40px);
+  opacity:.4;pointer-events:none;
+}
+.hero-blob.b1{width:300px;height:300px;background:var(--pink);top:10%;left:5%}
+.hero-blob.b2{width:240px;height:240px;background:var(--yellow);bottom:15%;right:8%}
+.hero-blob.b3{width:200px;height:200px;background:var(--lavender);top:50%;right:30%;opacity:.3}
+
+.hero-inner{
+  position:relative;z-index:2;
+  max-width:1080px;width:100%;
+  display:grid;grid-template-columns:1.05fr .95fr;gap:60px;align-items:center;
+}
+.hero-text{position:relative}
+.hero-greeting{
+  display:inline-block;
+  background:#fff;
+  padding:8px 20px;border-radius:999px;
+  font-size:14px;font-weight:700;
+  color:var(--sage-dark);
+  letter-spacing:.1em;
+  box-shadow:var(--shadow-soft);
+  margin-bottom:24px;
+}
+.hero-greeting::before{content:"🌿 ";margin-right:4px}
+.hero h1{
+  font-family:'Zen Maru Gothic',sans-serif;
+  font-size:54px;font-weight:900;
+  line-height:1.45;
+  color:var(--brown);
+  letter-spacing:.02em;
+  margin-bottom:24px;
+}
+.hero h1 .l-pink{color:#E89AAB}
+.hero h1 .l-yellow{color:#D4B844}
+.hero h1 .l-beige{color:var(--beige)}
+.hero h1 .l-lavender{color:#B68CBF}
+.hero h1 .l-sage{color:var(--sage-dark)}
+.hero h1 .dot{color:#E89AAB;font-size:.9em}
+.hero-sub{
+  font-size:18px;line-height:1.9;
+  color:var(--brown-soft);
+  margin-bottom:36px;
+  font-weight:500;
+}
+.hero-buttons{
+  display:flex;gap:14px;flex-wrap:wrap;
+}
+.hero-info{
+  margin-top:32px;
+  display:flex;gap:24px;flex-wrap:wrap;
+  font-size:14px;color:var(--brown-soft);
+}
+.hero-info-item{display:flex;align-items:center;gap:8px}
+.hero-info-item strong{color:var(--brown);font-weight:700}
+
+.hero-visual{
+  position:relative;
+  display:flex;align-items:center;justify-content:center;
+}
+.hero-image{
+  width:100%;max-width:480px;
+  aspect-ratio:1/1;
+  border-radius:50%;
   background-image:url('images/hero.jpg');
   background-size:cover;background-position:center;
-  filter:brightness(.45) saturate(.9);
-}
-.hero::before{
-  content:"";position:absolute;inset:0;z-index:1;
-  background:
-    linear-gradient(180deg,rgba(26,26,26,.5) 0%,rgba(26,26,26,.7) 100%),
-    radial-gradient(ellipse at 30% 30%,rgba(184,151,90,.2) 0%,transparent 50%),
-    radial-gradient(ellipse at 70% 70%,rgba(184,151,90,.15) 0%,transparent 50%);
-  pointer-events:none;
-}
-.hero::after{
-  content:"";position:absolute;left:50%;bottom:40px;transform:translateX(-50%);
-  width:1px;height:60px;background:linear-gradient(to bottom,transparent,var(--gold));
-  animation:scrollHint 2s ease-in-out infinite;
-}
-@keyframes scrollHint{
-  0%,100%{opacity:.3;transform:translate(-50%,0)}
-  50%{opacity:1;transform:translate(-50%,10px)}
-}
-.hero-inner{position:relative;z-index:2;max-width:900px;animation:fadeUp 1.2s ease}
-@keyframes fadeUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
-.hero-en{
-  font-size:14px;letter-spacing:.4em;color:var(--gold);
-  margin-bottom:32px;text-transform:uppercase;
-}
-.hero h1{
-  font-size:clamp(36px,6vw,68px);font-weight:300;letter-spacing:.15em;
-  line-height:1.4;margin-bottom:32px;
-}
-.hero h1 .accent{color:var(--gold);font-weight:500}
-.hero-sub{
-  font-size:clamp(14px,1.6vw,17px);font-weight:300;letter-spacing:.1em;
-  margin-bottom:48px;line-height:2;color:rgba(255,255,255,.85);
-}
-.hero-buttons{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
-
-/* ===== CONCEPT ===== */
-.concept{background:var(--cream)}
-.concept-intro{
-  max-width:700px;margin:0 auto 80px;text-align:center;
-  font-size:16px;line-height:2.2;color:var(--text-soft);
-}
-.concept-grid{
-  display:grid;grid-template-columns:repeat(3,1fr);gap:40px;
-}
-.concept-card{
-  background:#fff;padding:56px 32px;text-align:center;
-  border:1px solid var(--line);transition:all .4s;
+  box-shadow:
+    0 0 0 16px #fff,
+    0 0 0 18px var(--pink-soft),
+    0 20px 60px rgba(245,192,203,.4);
   position:relative;
+  z-index:2;
 }
-.concept-card:hover{
-  transform:translateY(-6px);
-  box-shadow:0 20px 40px rgba(26,26,26,.08);
-  border-color:var(--gold);
+.hero-logo-float{
+  position:absolute;
+  width:140px;height:140px;
+  border-radius:50%;
+  background:#fff;
+  padding:12px;
+  box-shadow:0 12px 30px rgba(166,124,82,.18);
+  bottom:8%;left:-4%;
+  z-index:3;
 }
-.concept-num{
-  font-family:'Cormorant Garamond',serif;font-size:48px;
-  color:var(--gold);font-weight:300;line-height:1;margin-bottom:24px;
-}
-.concept-card h3{
-  font-size:20px;font-weight:500;margin-bottom:20px;
-  letter-spacing:.08em;color:var(--dark);
-}
-.concept-card h3::after{
-  content:"";display:block;width:30px;height:1px;
-  background:var(--gold);margin:16px auto 0;
-}
-.concept-card p{font-size:14px;line-height:2;color:var(--text-soft)}
+.hero-logo-float img{width:100%;height:100%;border-radius:50%;object-fit:cover}
 
-@media(max-width:900px){
-  .concept-grid{grid-template-columns:1fr;gap:24px}
-  .concept-card{padding:44px 28px}
+.hero-deco-leaf{
+  position:absolute;
+  width:80px;height:80px;
+  top:5%;right:5%;
+  color:var(--sage);
+  opacity:.6;
+  animation:float 6s ease-in-out infinite;
+}
+@keyframes float{
+  0%,100%{transform:translateY(0) rotate(0deg)}
+  50%{transform:translateY(-12px) rotate(8deg)}
+}
+
+/* ===== ABOUT / お店紹介 ===== */
+.about{
+  background:linear-gradient(180deg, var(--base) 0%, var(--base-warm) 100%);
+}
+.about-intro{
+  max-width:760px;margin:0 auto 64px;
+  text-align:center;
+  font-size:17px;line-height:2;
+  color:var(--brown-soft);
+}
+.about-intro strong{color:var(--brown);font-weight:700}
+
+.feature-grid{
+  display:grid;grid-template-columns:repeat(3, 1fr);gap:28px;
+}
+.feature-card{
+  background:#fff;
+  border-radius:var(--radius-lg);
+  padding:44px 32px 36px;
+  text-align:center;
+  box-shadow:var(--shadow);
+  position:relative;
+  transition:transform .4s ease, box-shadow .4s ease;
+  border:1px solid rgba(232,213,183,.4);
+}
+.feature-card:hover{transform:translateY(-6px);box-shadow:var(--shadow-lg)}
+.feature-card:nth-child(1){background:linear-gradient(180deg, #fff 0%, #FFF4F6 100%)}
+.feature-card:nth-child(2){background:linear-gradient(180deg, #fff 0%, #FFFBE8 100%)}
+.feature-card:nth-child(3){background:linear-gradient(180deg, #fff 0%, #F4F8E8 100%)}
+.feature-icon{
+  width:80px;height:80px;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  margin:0 auto 20px;
+  font-size:38px;
+}
+.feature-card:nth-child(1) .feature-icon{background:var(--pink-soft);color:#E89AAB}
+.feature-card:nth-child(2) .feature-icon{background:var(--yellow-soft);color:#C9A93B}
+.feature-card:nth-child(3) .feature-icon{background:#E8F0CC;color:var(--sage-dark)}
+.feature-card h3{
+  font-family:'Zen Maru Gothic',sans-serif;
+  font-size:22px;font-weight:700;
+  color:var(--brown);
+  margin-bottom:14px;
+  letter-spacing:.03em;
+}
+.feature-card p{
+  font-size:15px;line-height:1.95;
+  color:var(--brown-soft);
 }
 
 /* ===== MENU ===== */
-.menu{background:var(--cream-2)}
+.menu-section{
+  background:
+    radial-gradient(circle at 20% 20%, rgba(245,230,168,.25), transparent 50%),
+    radial-gradient(circle at 80% 80%, rgba(245,192,203,.2), transparent 50%),
+    var(--base);
+}
 .menu-grid{
-  display:grid;grid-template-columns:repeat(3,1fr);gap:24px;
+  display:grid;
+  grid-template-columns:repeat(auto-fill, minmax(320px, 1fr));
+  gap:28px;
 }
-@media(max-width:1100px){.menu-grid{grid-template-columns:repeat(2,1fr)}}
 .menu-card{
-  background:#fff;border:1px solid var(--line);
-  transition:all .4s;display:flex;flex-direction:column;
-  position:relative;overflow:hidden;
+  background:#fff;
+  border-radius:var(--radius-lg);
+  overflow:hidden;
+  box-shadow:var(--shadow);
+  transition:transform .4s ease, box-shadow .4s ease;
+  display:flex;flex-direction:column;
+  border:1px solid rgba(232,213,183,.4);
 }
+.menu-card:hover{transform:translateY(-6px);box-shadow:var(--shadow-lg)}
 .menu-card-img{
-  width:100%;height:180px;background-size:cover;background-position:center;
-  background-color:#e5dfd2;
+  width:100%;height:220px;
+  background-size:cover;background-position:center;
+  position:relative;
 }
-.menu-card-body{padding:32px 28px 32px;display:flex;flex-direction:column;flex:1}
+.menu-card-img::after{
+  content:"";position:absolute;inset:0;
+  background:linear-gradient(180deg, transparent 50%, rgba(255,250,245,.4));
+}
+.menu-card-body{padding:28px 26px 30px;flex:1;display:flex;flex-direction:column}
 .menu-tag{
-  display:inline-block;padding:3px 10px;background:var(--gold);color:#fff;
-  font-size:10px;letter-spacing:.15em;margin-bottom:14px;align-self:flex-start;
+  display:inline-block;
+  background:var(--pink);color:#fff;
+  font-size:11px;font-weight:700;letter-spacing:.15em;
+  padding:5px 14px;border-radius:999px;
+  margin-bottom:14px;align-self:flex-start;
 }
-.menu-card::before{
-  content:"";position:absolute;top:0;left:0;width:100%;height:3px;
-  background:var(--gold);transform:scaleX(0);transform-origin:left;
-  transition:transform .4s;
-}
-.menu-card:hover::before{transform:scaleX(1)}
-.menu-card:hover{transform:translateY(-4px);box-shadow:0 20px 40px rgba(26,26,26,.08)}
-.menu-num{
-  font-family:'Cormorant Garamond',serif;font-size:14px;
-  color:var(--gold);letter-spacing:.3em;margin-bottom:20px;
-}
+.menu-tag.recommend{background:var(--sage)}
+.menu-tag.premium{background:var(--lavender);color:#fff}
 .menu-card h3{
-  font-size:19px;font-weight:500;margin-bottom:16px;
-  letter-spacing:.05em;color:var(--dark);line-height:1.6;
+  font-family:'Zen Maru Gothic',sans-serif;
+  font-size:21px;font-weight:700;
+  color:var(--brown);
+  margin-bottom:6px;
+  line-height:1.5;
+}
+.menu-card h3 small{
+  display:block;
+  font-size:13px;
+  color:var(--brown-light);
+  font-weight:500;
+  margin-top:6px;
 }
 .menu-desc{
-  font-size:13px;color:var(--text-soft);line-height:1.9;
-  margin-bottom:24px;flex:1;
+  font-size:15px;line-height:1.9;
+  color:var(--brown-soft);
+  margin:14px 0 20px;
+  flex:1;
 }
 .menu-price{
-  display:flex;align-items:baseline;justify-content:space-between;
-  padding:20px 0;border-top:1px solid var(--line);
-  border-bottom:1px solid var(--line);margin-bottom:28px;
+  display:flex;align-items:baseline;gap:12px;
+  padding:14px 18px;
+  background:var(--yellow-soft);
+  border-radius:var(--radius-sm);
+  margin-bottom:18px;
 }
-.menu-price-label{font-size:12px;letter-spacing:.2em;color:var(--text-soft)}
+.menu-price-label{
+  font-size:13px;color:var(--brown-light);
+  font-weight:700;letter-spacing:.1em;
+}
 .menu-price-value{
-  font-family:'Cormorant Garamond',serif;font-size:26px;
-  color:var(--dark);font-weight:500;
+  font-size:26px;font-weight:900;
+  color:var(--brown);
+  margin-left:auto;
 }
-.menu-price-value .yen{font-size:14px;font-family:'Noto Serif JP';margin-left:4px}
-.menu-card .btn{align-self:stretch}
-
+.menu-card .btn{width:100%;font-size:15px;padding:14px 24px}
 .menu-note{
-  text-align:center;margin-top:48px;font-size:14px;
-  color:var(--text-soft);letter-spacing:.05em;
+  text-align:center;
+  margin-top:40px;
+  font-size:15px;color:var(--brown-soft);
+  background:#fff;
+  display:inline-block;
+  padding:14px 28px;border-radius:999px;
+  box-shadow:var(--shadow-soft);
 }
-.menu-note strong{color:var(--gold);font-weight:500}
-
-@media(max-width:900px){
-  .menu-grid{grid-template-columns:1fr;gap:20px}
-  .menu-card{padding:36px 28px}
-}
+.menu-note-wrap{text-align:center;margin-top:40px}
+.menu-note-wrap strong{color:var(--sage-dark)}
 
 /* ===== FLOW ===== */
-.flow{background:#fff}
-.flow-layout{
-  display:grid;grid-template-columns:300px 1fr;gap:48px;align-items:center;
-}
-.flow-mascot{
-  background:url('images/logo.jpg') center/contain no-repeat;
-  width:100%;aspect-ratio:1/1;
-  filter:drop-shadow(0 8px 24px rgba(184,151,90,.15));
+.flow-section{
+  background:linear-gradient(180deg, var(--base-warm) 0%, var(--base) 100%);
 }
 .flow-grid{
-  display:grid;grid-template-columns:repeat(4,1fr);gap:16px;
+  display:grid;
+  grid-template-columns:repeat(4, 1fr);
+  gap:24px;
+  max-width:960px;margin:0 auto;
 }
 .flow-step{
-  text-align:center;padding:32px 18px;position:relative;
-  border:1px solid var(--line);background:var(--cream);
-  transition:all .4s;
+  background:#fff;
+  border-radius:var(--radius);
+  padding:28px 20px 24px;
+  text-align:center;
+  box-shadow:var(--shadow-soft);
+  position:relative;
+  border:1px solid rgba(232,213,183,.5);
+  transition:transform .3s ease;
 }
-.flow-step:hover{border-color:var(--gold);transform:translateY(-4px);background:#fff;box-shadow:0 12px 24px rgba(26,26,26,.06)}
-.flow-icon{
-  width:52px;height:52px;margin:0 auto 16px;display:flex;
-  align-items:center;justify-content:center;border-radius:50%;
-  background:#fff;border:1px solid var(--gold);color:var(--gold);
-  transition:all .4s;
+.flow-step:hover{transform:translateY(-4px)}
+.flow-icon-circle{
+  width:64px;height:64px;
+  margin:0 auto 14px;
+  border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  font-size:28px;font-weight:900;
+  color:#fff;
+  font-family:'Zen Maru Gothic',sans-serif;
 }
-.flow-step:hover .flow-icon{background:var(--gold);color:#fff;transform:rotate(8deg)}
-.flow-icon svg{width:26px;height:26px;stroke-width:1.5;fill:none;stroke:currentColor}
-
-@media(max-width:1000px){
-  .flow-layout{grid-template-columns:1fr;gap:32px}
-  .flow-mascot{position:static;max-width:240px;margin:0 auto}
-}
-.flow-step::after{
-  content:"→";position:absolute;right:-15px;top:50%;
-  transform:translateY(-50%);color:var(--gold);font-size:18px;
-  z-index:2;
-}
-.flow-step:nth-child(4n)::after,
-.flow-step:last-child::after{display:none}
-.flow-num{
-  font-family:'Cormorant Garamond',serif;font-size:14px;
-  color:var(--gold);letter-spacing:.3em;margin-bottom:12px;
-}
+.flow-step:nth-child(4n+1) .flow-icon-circle{background:#E89AAB}
+.flow-step:nth-child(4n+2) .flow-icon-circle{background:#D4B844}
+.flow-step:nth-child(4n+3) .flow-icon-circle{background:var(--sage)}
+.flow-step:nth-child(4n) .flow-icon-circle{background:#B68CBF}
 .flow-step h4{
-  font-size:16px;font-weight:500;color:var(--dark);
-  letter-spacing:.05em;
+  font-family:'Zen Maru Gothic',sans-serif;
+  font-size:18px;font-weight:700;
+  color:var(--brown);
+  margin-bottom:6px;
 }
-
-@media(max-width:900px){
-  .flow-grid{grid-template-columns:repeat(2,1fr)}
-  .flow-step:nth-child(2n)::after{display:none}
-  .flow-step:nth-child(2n-1)::after{display:block}
-}
-@media(max-width:480px){
-  .flow-grid{grid-template-columns:1fr;gap:14px}
-  .flow-step::after{
-    content:"↓";right:50%;top:auto;bottom:-22px;
-    transform:translateX(50%);
-  }
-  .flow-step:last-child::after{display:none}
-  .flow-step:nth-child(2n)::after,
-  .flow-step:nth-child(2n-1)::after{display:block}
+.flow-step p{
+  font-size:13px;
+  color:var(--brown-soft);
+  line-height:1.7;
 }
 
 /* ===== VOICE ===== */
-.voice{background:var(--cream)}
+.voice-section{
+  background:
+    radial-gradient(circle at 80% 20%, rgba(213,184,220,.2), transparent 50%),
+    var(--base);
+}
 .voice-rating{
-  text-align:center;margin-bottom:64px;padding:40px;
-  background:#fff;max-width:560px;margin-left:auto;margin-right:auto;
-  border:1px solid var(--line);
+  text-align:center;
+  background:#fff;
+  border-radius:var(--radius-lg);
+  padding:36px 32px;
+  max-width:480px;margin:0 auto 56px;
+  box-shadow:var(--shadow);
+  border:1px solid rgba(232,213,183,.5);
 }
 .voice-rating-num{
-  font-family:'Cormorant Garamond',serif;font-size:64px;
-  color:var(--gold);font-weight:500;line-height:1;margin-bottom:8px;
+  font-family:'Zen Maru Gothic',sans-serif;
+  font-size:64px;font-weight:900;
+  color:#E89AAB;
+  line-height:1;
 }
-.voice-stars{font-size:20px;color:var(--gold);letter-spacing:.1em;margin-bottom:12px}
+.voice-stars{
+  font-size:24px;color:#F5C547;
+  letter-spacing:.15em;
+  margin:10px 0;
+}
 .voice-rating-meta{
-  font-size:13px;color:var(--text-soft);letter-spacing:.1em;
+  font-size:14px;color:var(--brown-soft);
+  line-height:1.7;
 }
-.voice-rating-meta strong{color:var(--dark);font-weight:500}
+.voice-rating-meta strong{color:var(--brown);font-weight:700}
 
 .voice-grid{
-  display:grid;grid-template-columns:repeat(3,1fr);gap:32px;
-  margin-bottom:48px;
+  display:grid;grid-template-columns:repeat(3, 1fr);gap:28px;
 }
 .voice-card{
-  background:#fff;padding:40px 32px;border:1px solid var(--line);
-  transition:all .4s;position:relative;
+  background:#fff;
+  border-radius:var(--radius);
+  padding:32px 28px;
+  box-shadow:var(--shadow-soft);
+  position:relative;
+  border:1px solid rgba(232,213,183,.5);
+  transition:transform .3s ease;
 }
-.voice-card:hover{transform:translateY(-4px);box-shadow:0 20px 40px rgba(26,26,26,.06)}
+.voice-card:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
 .voice-card::before{
-  content:"\201C";position:absolute;top:16px;left:24px;
-  font-family:'Cormorant Garamond',serif;font-size:64px;
-  color:var(--gold);opacity:.3;line-height:1;
+  content:"\201C";
+  position:absolute;top:12px;left:24px;
+  font-size:72px;font-family:Georgia,serif;
+  color:var(--pink-soft);
+  line-height:1;
 }
-.voice-stars-small{font-size:14px;color:var(--gold);margin-bottom:16px}
+.voice-stars-small{
+  font-size:16px;color:#F5C547;
+  letter-spacing:.1em;
+  margin-bottom:14px;
+  position:relative;z-index:1;
+}
 .voice-text{
-  font-size:14px;line-height:2;color:var(--text);
-  margin-bottom:24px;min-height:140px;
+  font-size:15px;line-height:1.95;
+  color:var(--brown);
+  margin-bottom:18px;
+  position:relative;z-index:1;
 }
 .voice-meta{
-  font-size:13px;color:var(--text-soft);
-  padding-top:20px;border-top:1px solid var(--line);
-  letter-spacing:.05em;
+  font-size:13px;color:var(--brown-light);
+  font-weight:700;
+  padding-top:14px;
+  border-top:1px dashed var(--beige);
 }
-.voice-cta{text-align:center}
-
-@media(max-width:900px){
-  .voice-grid{grid-template-columns:1fr;gap:20px}
-}
-
-/* ===== STAFF ===== */
-.staff{background:#fff}
-.staff-grid{
-  display:grid;grid-template-columns:repeat(3,1fr);gap:24px;
-}
-.staff-card{
-  background:var(--cream);padding:32px 24px;text-align:center;
-  border:1px solid var(--line);transition:all .4s;
-}
-.staff-card:hover{transform:translateY(-4px);border-color:var(--gold);box-shadow:0 16px 32px rgba(26,26,26,.06)}
-.staff-photo{
-  width:120px;height:120px;border-radius:50%;
-  margin:0 auto 20px;
-  background:linear-gradient(135deg,#d4cfc4 0%,#aaa39a 100%);
-  background-size:cover;background-position:center 22%;
-  display:flex;align-items:center;justify-content:center;
-  font-family:'Cormorant Garamond',serif;font-size:42px;
-  color:#fff;font-weight:300;
-  border:3px solid #fff;
-  box-shadow:0 4px 12px rgba(0,0,0,.08);
-  position:relative;
-}
-.staff-photo::after{
-  content:"";position:absolute;inset:-6px;
-  border:1px solid var(--gold);border-radius:50%;opacity:.5;
-}
-.staff-card h4{
-  font-size:18px;font-weight:500;margin-bottom:6px;
-  letter-spacing:.08em;color:var(--dark);
-}
-.staff-en{
-  font-family:'Cormorant Garamond',serif;font-size:12px;
-  color:var(--gold);letter-spacing:.2em;margin-bottom:14px;
-}
-.staff-info{
-  font-size:13px;color:var(--text-soft);line-height:1.9;
-  min-height:60px;
-}
-.staff-tag{
-  display:inline-block;padding:3px 12px;background:var(--gold);
-  color:#fff;font-size:11px;letter-spacing:.1em;margin-top:12px;
-}
-.staff-tag.male{background:var(--dark-2)}
-
-@media(max-width:900px){
-  .staff-grid{grid-template-columns:repeat(2,1fr);gap:14px}
-}
-@media(max-width:480px){
-  .staff-grid{grid-template-columns:1fr;max-width:360px;margin:0 auto}
-}
+.voice-cta{text-align:center;margin-top:48px}
 
 /* ===== GALLERY ===== */
-.gallery{background:var(--cream)}
+.gallery-section{
+  background:linear-gradient(180deg, var(--base) 0%, var(--base-warm) 100%);
+}
 .gallery-grid{
-  display:grid;grid-template-columns:repeat(3,1fr);gap:16px;
+  display:grid;
+  grid-template-columns:repeat(4, 1fr);
+  gap:18px;
 }
 .gallery-item{
-  aspect-ratio:4/3;background-size:cover;background-position:center;
-  border:1px solid var(--line);transition:all .5s;cursor:pointer;
-  background-color:#e5dfd2;
+  aspect-ratio:1/1;
+  background-size:cover;background-position:center;
+  border-radius:var(--radius);
+  box-shadow:var(--shadow-soft);
+  transition:transform .4s ease, box-shadow .4s ease;
+  border:6px solid #fff;
+  cursor:pointer;
 }
-.gallery-item:hover{transform:scale(1.02);box-shadow:0 12px 32px rgba(26,26,26,.12)}
-.gallery-item.span-2{grid-column:span 2;aspect-ratio:8/3}
-@media(max-width:900px){
-  .gallery-grid{grid-template-columns:repeat(2,1fr);gap:10px}
-  .gallery-item.span-2{grid-column:span 2;aspect-ratio:4/3}
+.gallery-item:hover{
+  transform:translateY(-6px) rotate(-1deg);
+  box-shadow:var(--shadow-lg);
 }
+.gallery-item:nth-child(2):hover,
+.gallery-item:nth-child(5):hover,
+.gallery-item:nth-child(7):hover{transform:translateY(-6px) rotate(1deg)}
+
+/* ===== STAFF ===== */
+.staff-section{background:var(--base)}
+.staff-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fill, minmax(220px, 1fr));
+  gap:28px;
+}
+.staff-card{
+  background:#fff;
+  border-radius:var(--radius);
+  padding:28px 20px 24px;
+  text-align:center;
+  box-shadow:var(--shadow-soft);
+  transition:transform .3s ease;
+  border:1px solid rgba(232,213,183,.5);
+}
+.staff-card:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+.staff-photo{
+  width:120px;height:120px;
+  border-radius:50%;
+  margin:0 auto 16px;
+  background-size:cover;background-position:center;
+  border:4px solid #fff;
+  box-shadow:0 0 0 4px var(--pink-soft);
+}
+.staff-photo.initial{
+  background:linear-gradient(135deg, var(--yellow-soft), var(--pink-soft));
+  display:flex;align-items:center;justify-content:center;
+  font-family:'Zen Maru Gothic',sans-serif;
+  font-size:42px;font-weight:900;color:var(--brown);
+  box-shadow:0 0 0 4px var(--lavender-soft);
+}
+.staff-card:nth-child(3n+2) .staff-photo{box-shadow:0 0 0 4px var(--yellow-soft)}
+.staff-card:nth-child(3n) .staff-photo{box-shadow:0 0 0 4px #E8F0CC}
+.staff-card h4{
+  font-family:'Zen Maru Gothic',sans-serif;
+  font-size:20px;font-weight:700;
+  color:var(--brown);
+  margin-bottom:14px;
+}
+.staff-info{
+  font-size:14px;line-height:1.85;
+  color:var(--brown-soft);
+  margin-bottom:14px;
+}
+.staff-info small{font-size:12px;color:#E89AAB}
+.staff-tag{
+  display:inline-block;
+  font-size:12px;font-weight:700;
+  padding:5px 14px;border-radius:999px;
+  background:var(--pink-soft);color:#C76A7E;
+  letter-spacing:.1em;
+}
+.staff-tag.male{background:#E0EDC8;color:var(--sage-dark)}
 
 /* ===== RECRUIT ===== */
-.recruit{
-  background:linear-gradient(135deg,var(--cream-2) 0%,var(--cream) 100%);
+.recruit-section{
+  background:linear-gradient(180deg, var(--base-warm) 0%, #FFF4E8 100%);
 }
 .recruit-grid{
-  display:grid;grid-template-columns:repeat(2,1fr);gap:32px;
-  margin-bottom:48px;
+  display:grid;grid-template-columns:1fr 1fr;gap:28px;
+  max-width:880px;margin:0 auto;
 }
 .recruit-card{
-  background:#fff;padding:48px 40px;border:1px solid var(--line);
-  transition:all .4s;
+  background:#fff;
+  border-radius:var(--radius-lg);
+  padding:40px 36px;
+  box-shadow:var(--shadow);
+  border:1px solid rgba(232,213,183,.5);
 }
-.recruit-card:hover{transform:translateY(-4px);box-shadow:0 20px 40px rgba(26,26,26,.06)}
 .recruit-tag{
-  display:inline-block;padding:6px 18px;background:var(--gold);
-  color:#fff;font-size:12px;letter-spacing:.2em;margin-bottom:20px;
+  display:inline-block;
+  background:var(--yellow);color:var(--brown);
+  font-size:12px;font-weight:700;letter-spacing:.15em;
+  padding:6px 16px;border-radius:999px;
+  margin-bottom:14px;
 }
+.recruit-card:nth-child(2) .recruit-tag{background:var(--sage);color:#fff}
 .recruit-card h3{
-  font-size:24px;font-weight:500;margin-bottom:24px;
-  letter-spacing:.05em;color:var(--dark);
+  font-family:'Zen Maru Gothic',sans-serif;
+  font-size:24px;font-weight:700;
+  color:var(--brown);
+  margin-bottom:20px;
 }
-.recruit-card ul{margin-bottom:0}
+.recruit-card ul{display:flex;flex-direction:column;gap:12px}
 .recruit-card li{
-  padding:12px 0;border-bottom:1px solid var(--line);
-  font-size:14px;color:var(--text);display:flex;gap:16px;
+  padding-left:20px;position:relative;
+  font-size:15px;line-height:1.85;
+  color:var(--brown-soft);
 }
-.recruit-card li:last-child{border-bottom:none}
+.recruit-card li::before{
+  content:"";position:absolute;
+  left:0;top:.85em;
+  width:8px;height:8px;border-radius:50%;
+  background:var(--sage);
+}
 .recruit-card li strong{
-  min-width:80px;color:var(--gold);font-weight:500;
-  letter-spacing:.1em;font-size:13px;
+  display:inline-block;min-width:88px;
+  color:var(--brown);font-weight:700;
 }
-.recruit-cta{text-align:center}
+.recruit-cta{text-align:center;margin-top:48px}
 
-@media(max-width:900px){
-  .recruit-grid{grid-template-columns:1fr;gap:20px}
-  .recruit-card{padding:36px 28px}
+/* ===== RESERVATION ===== */
+.reservation-section{
+  background:
+    radial-gradient(circle at 50% 0%, rgba(245,192,203,.3), transparent 60%),
+    linear-gradient(180deg, #FFF4E8 0%, var(--base) 100%);
+  text-align:center;
 }
-
-/* ===== LINE ===== */
-.line-section{
-  background:linear-gradient(135deg,rgba(26,26,26,.92) 0%,rgba(42,37,32,.92) 100%),url('images/gallery1.jpg') center/cover no-repeat;
-  color:#fff;text-align:center;position:relative;
+.reservation-intro{
+  max-width:680px;margin:0 auto 40px;
+  font-size:17px;line-height:2;color:var(--brown-soft);
 }
-.line-section .section-label{color:var(--gold-light)}
-.line-section .section-title{color:#fff}
-.line-section .section-title::after{background:var(--gold-light)}
-.line-intro{
-  max-width:600px;margin:0 auto 48px;font-size:15px;
-  line-height:2.2;color:rgba(255,255,255,.8);
+.reservation-buttons{
+  display:flex;gap:18px;flex-wrap:wrap;justify-content:center;
+  margin-top:32px;
 }
-.line-buttons{
-  display:flex;gap:20px;justify-content:center;flex-wrap:wrap;
+.reservation-buttons .btn{padding:20px 44px;font-size:17px}
+.reservation-note{
+  margin-top:32px;font-size:14px;color:var(--brown-light);
 }
-.line-buttons .btn{min-width:280px}
 
 /* ===== ACCESS ===== */
-.access{background:var(--cream)}
+.access-section{background:var(--base)}
 .access-grid{
   display:grid;grid-template-columns:1fr 1.2fr;gap:48px;
-  align-items:stretch;
+  align-items:start;
 }
 .access-info{
-  background:#fff;padding:48px 40px;border:1px solid var(--line);
+  background:#fff;
+  border-radius:var(--radius-lg);
+  padding:40px 36px;
+  box-shadow:var(--shadow);
+  border:1px solid rgba(232,213,183,.5);
 }
-.access-info dl{margin:0}
+.access-info dl{display:grid;gap:22px}
 .access-info dt{
-  font-size:12px;letter-spacing:.2em;color:var(--gold);
-  margin-bottom:8px;font-weight:500;
+  font-size:12px;
+  letter-spacing:.2em;
+  color:var(--sage-dark);
+  font-weight:700;
+  margin-bottom:6px;
 }
 .access-info dd{
-  font-size:15px;color:var(--text);line-height:2;
-  margin-bottom:24px;padding-bottom:24px;border-bottom:1px solid var(--line);
+  font-size:16px;line-height:1.85;
+  color:var(--brown);
+  padding-bottom:18px;
+  border-bottom:1px dashed var(--beige);
 }
-.access-info dd:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0}
+.access-info dd:last-child{border-bottom:none;padding-bottom:0}
+.access-info dd strong{color:var(--brown);font-weight:700}
+.access-info dd a{
+  color:var(--sage-dark);font-weight:700;
+  border-bottom:2px solid var(--sage);
+  padding-bottom:2px;
+}
+.access-info dd a:hover{color:#fff;background:var(--sage);border-radius:6px;padding:2px 6px;border-bottom:none}
 .access-map{
-  position:relative;min-height:380px;border:1px solid var(--line);
+  border-radius:var(--radius-lg);
   overflow:hidden;
+  box-shadow:var(--shadow);
+  height:100%;min-height:480px;
+  border:6px solid #fff;
 }
 .access-map iframe{
-  position:absolute;inset:0;width:100%;height:100%;border:0;
-}
-
-@media(max-width:900px){
-  .access-grid{grid-template-columns:1fr;gap:24px}
-  .access-info{padding:36px 28px}
-  .access-map{min-height:300px}
+  width:100%;height:100%;min-height:468px;
+  border:0;display:block;
 }
 
 /* ===== FOOTER ===== */
 .footer{
-  background:var(--dark);color:rgba(255,255,255,.7);padding:80px 0 32px;
+  background:linear-gradient(180deg, #FFF4E8 0%, #F2E5CE 100%);
+  color:var(--brown);
+  padding:64px 0 24px;
+  position:relative;
+}
+.footer::before{
+  content:"";display:block;
+  height:14px;
+  background:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 14' preserveAspectRatio='none'><path d='M0,7 Q30,0 60,7 T120,7 T180,7 T240,7 T300,7 T360,7 T420,7 T480,7 T540,7 T600,7 T660,7 T720,7 T780,7 T840,7 T900,7 T960,7 T1020,7 T1080,7 T1140,7 T1200,7' stroke='%23B8C97C' stroke-width='2' fill='none'/></svg>") repeat-x;
+  position:absolute;top:-1px;left:0;right:0;
 }
 .footer-top{
-  display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:48px;
-  padding-bottom:48px;border-bottom:1px solid rgba(255,255,255,.1);
+  display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:48px;
+  margin-bottom:40px;
 }
-.footer-brand .logo{font-size:28px;color:#fff;margin-bottom:16px;display:inline-block}
-.footer-brand .logo .dot{color:var(--gold)}
-.footer-brand p{font-size:13px;line-height:2;color:rgba(255,255,255,.6)}
+.footer-brand{display:flex;flex-direction:column;gap:14px}
+.footer-brand .logo-link{margin-bottom:4px}
+.footer-brand p{
+  font-size:14px;line-height:1.95;color:var(--brown-soft);
+}
 .footer h5{
-  font-size:13px;letter-spacing:.2em;color:var(--gold);
-  margin-bottom:20px;font-weight:500;
+  font-family:'Zen Maru Gothic',sans-serif;
+  font-size:15px;font-weight:700;
+  color:var(--sage-dark);
+  margin-bottom:18px;
+  letter-spacing:.1em;
 }
-.footer ul li{margin-bottom:10px}
-.footer ul li a{
-  font-size:14px;color:rgba(255,255,255,.7);transition:color .3s;
+.footer ul{display:flex;flex-direction:column;gap:10px}
+.footer ul a{
+  font-size:14px;color:var(--brown-soft);
+  font-weight:500;
 }
-.footer ul li a:hover{color:var(--gold-light)}
+.footer ul a:hover{color:var(--sage-dark)}
 .footer-bottom{
-  padding-top:32px;display:flex;justify-content:space-between;
-  align-items:center;flex-wrap:wrap;gap:16px;
+  display:flex;justify-content:space-between;align-items:center;
+  flex-wrap:wrap;gap:14px;
+  padding-top:24px;
+  border-top:1px dashed var(--beige);
+  font-size:13px;color:var(--brown-light);
 }
-.footer-copy{
-  font-family:'Cormorant Garamond',serif;font-size:13px;
-  letter-spacing:.15em;color:rgba(255,255,255,.5);
+.footer-bottom a{
+  color:var(--brown-soft);font-weight:700;
 }
-.footer-hpb{
-  font-size:12px;color:rgba(255,255,255,.6);
-  padding:8px 18px;border:1px solid rgba(255,255,255,.2);
-  letter-spacing:.1em;transition:all .3s;
-}
-.footer-hpb:hover{border-color:var(--gold);color:var(--gold-light)}
-
-@media(max-width:900px){
-  .footer-top{grid-template-columns:1fr;gap:32px}
-  .footer-bottom{justify-content:center;text-align:center}
-}
+.footer-bottom a:hover{color:var(--sage-dark)}
 
 /* ===== FAB ===== */
 .fab{
-  position:fixed;right:20px;bottom:20px;z-index:999;
-  display:flex;flex-direction:column;gap:10px;
+  position:fixed;
+  right:18px;bottom:18px;
+  display:none;
+  flex-direction:column;gap:10px;
+  z-index:900;
 }
 .fab a{
-  width:60px;height:60px;border-radius:50%;
   display:flex;align-items:center;justify-content:center;
-  color:#fff;font-size:11px;font-weight:500;text-align:center;
-  letter-spacing:.05em;line-height:1.2;box-shadow:0 6px 18px rgba(0,0,0,.2);
-  transition:all .3s;
+  width:60px;height:60px;
+  border-radius:50%;
+  font-size:13px;font-weight:900;
+  color:#fff;
+  box-shadow:0 6px 18px rgba(0,0,0,.18);
+  text-align:center;line-height:1.2;
 }
-.fab a:hover{transform:scale(1.08)}
-.fab .fab-hpb{background:var(--gold)}
-.fab .fab-line{background:#06C755}
+.fab-tel{background:var(--yellow);color:var(--brown) !important}
+.fab-hpb{background:var(--sage)}
 
-@media(min-width:901px){.fab{display:none}}
-
-/* ===== RESPONSIVE BASE ===== */
-@media(max-width:900px){
-  .section{padding:80px 0}
-  .section-title{font-size:28px;margin-bottom:48px}
-  body{font-size:15px}
+/* ===== RESPONSIVE ===== */
+@media (max-width: 960px){
+  .hero-inner{grid-template-columns:1fr;gap:48px;text-align:center}
+  .hero h1{font-size:42px}
+  .hero-text{order:2}
+  .hero-visual{order:1}
+  .hero-image{max-width:360px}
+  .hero-buttons,.hero-info{justify-content:center}
+  .feature-grid{grid-template-columns:1fr;gap:20px}
+  .flow-grid{grid-template-columns:repeat(2, 1fr)}
+  .voice-grid{grid-template-columns:1fr;gap:20px}
+  .gallery-grid{grid-template-columns:repeat(2, 1fr)}
+  .recruit-grid{grid-template-columns:1fr}
+  .access-grid{grid-template-columns:1fr;gap:24px}
+  .access-map{min-height:340px}
+  .access-map iframe{min-height:328px}
+  .footer-top{grid-template-columns:1fr;gap:28px}
 }
-@media(max-width:480px){
-  .wrap{padding:0 20px}
-  .section{padding:64px 0}
+
+@media (max-width: 760px){
+  body{font-size:16px}
+  .section{padding:72px 0}
+  .section-title{font-size:28px}
+  .section-sub{font-size:15px;margin-bottom:40px}
+  .nav{
+    position:fixed;top:0;right:-100%;
+    width:80%;max-width:320px;height:100vh;
+    background:#fff;
+    flex-direction:column;align-items:flex-start;
+    padding:90px 28px 28px;gap:8px;
+    box-shadow:-8px 0 30px rgba(0,0,0,.1);
+    transition:right .4s ease;
+    overflow-y:auto;
+  }
+  .nav.open{right:0}
+  .nav a{
+    width:100%;padding:14px 16px;
+    font-size:16px;border-radius:14px;
+  }
+  .header-cta{margin:8px 0 0;width:100%;padding:14px 22px !important}
+  .menu-toggle{display:flex}
+  .hero{padding:100px 20px 60px;min-height:auto}
+  .hero h1{font-size:36px;line-height:1.5}
+  .hero-sub{font-size:16px}
+  .hero-image{max-width:300px}
+  .hero-logo-float{width:100px;height:100px;bottom:0;left:-2%}
+  .hero-deco-leaf{width:50px;height:50px}
+  .menu-grid{grid-template-columns:1fr}
+  .menu-card-img{height:200px}
+  .voice-card{padding:28px 22px}
+  .fab{display:flex}
+  .access-info,.recruit-card{padding:28px 22px}
+  .recruit-cta .btn,.reservation-buttons .btn{padding:16px 28px;font-size:15px}
+  .reservation-buttons{flex-direction:column;align-items:stretch}
+  .reservation-buttons .btn{width:100%}
+}
+
+@media (max-width: 480px){
+  .hero h1{font-size:30px}
   .section-title{font-size:24px}
-  .btn{padding:16px 32px;font-size:14px}
+  .gallery-grid{grid-template-columns:1fr 1fr;gap:12px}
+  .flow-grid{grid-template-columns:1fr 1fr;gap:14px}
+  .staff-grid{grid-template-columns:1fr 1fr;gap:16px}
+  .staff-photo{width:100px;height:100px}
+  .logo-text{font-size:18px}
+  .logo-img{width:46px;height:46px}
+  .logo-sub{display:none}
+  .btn{padding:14px 28px;font-size:14px;min-height:48px}
 }
 </style>
 </head>
@@ -660,15 +895,20 @@ button{font-family:inherit;cursor:pointer;border:none;background:none}
 <!-- ===== HEADER ===== -->
 <header class="header" id="header">
   <div class="header-inner">
-    <a href="#top" class="logo"><span class="logo-img" aria-hidden="true"></span><span>ととのう<span class="dot">。</span></span></a>
+    <a href="#top" class="logo-link" aria-label="ととのう。トップへ">
+      <img src="images/logo.jpg" alt="ととのう。" class="logo-img">
+      <div>
+        <div class="logo-text">ととのう<span class="dot">。</span></div>
+        <div class="logo-sub">SHIZUOKA RELAXATION</div>
+      </div>
+    </a>
     <nav class="nav" id="nav">
-      <a href="#concept">コンセプト</a>
+      <a href="#about">お店紹介</a>
       <a href="#menu">メニュー</a>
       <a href="#flow">来店の流れ</a>
       <a href="#voice">お客様の声</a>
       <a href="#gallery">ギャラリー</a>
       <a href="#staff">スタッフ</a>
-      <a href="#recruit">求人</a>
       <a href="#access">アクセス</a>
       <a href="https://beauty.hotpepper.jp/CSP/kr/reserve/?storeId=H000405803" target="_blank" rel="noopener" class="header-cta">ご予約はこちら</a>
     </nav>
@@ -678,212 +918,268 @@ button{font-family:inherit;cursor:pointer;border:none;background:none}
 
 <!-- ===== HERO ===== -->
 <section class="hero" id="top">
-  <div class="hero-bg"></div>
+  <span class="hero-blob b1"></span>
+  <span class="hero-blob b2"></span>
+  <span class="hero-blob b3"></span>
+
   <div class="hero-inner">
-    <div class="hero-en en">TOTONOU. — Relaxation Salon</div>
-    <h1>心と体を、<br><span class="accent">ととのえる</span>。</h1>
-    <p class="hero-sub">日々の頑張りに、静かなご褒美を。<br>大人のための、ゆったり寛ぐ癒しの空間。</p>
-    <div class="hero-buttons">
-      <a href="tel:054-655-2305" class="btn btn-gold">今すぐ電話予約</a>
-      <a href="https://beauty.hotpepper.jp/CSP/kr/reserve/?storeId=H000405803" target="_blank" rel="noopener" class="btn btn-gold">ネット予約</a>
-      <a href="#menu" class="btn btn-outline-light">メニューを見る</a>
+    <div class="hero-text">
+      <span class="hero-greeting">静岡市葵区・瀬名川のリラクゼーション</span>
+      <h1>
+        <span class="l-pink">やすらぐ</span>。<br>
+        <span class="l-yellow">やわらぐ</span>。<br>
+        からだも、こころも、<br>
+        <span class="l-sage">ととのう</span><span class="dot">。</span>
+      </h1>
+      <p class="hero-sub">
+        やわらかな手のぬくもりと、ゆったり流れる時間。<br>
+        毎日のお疲れを、ふぅっと、ほどいてゆく時間です。
+      </p>
+      <div class="hero-buttons">
+        <a href="https://beauty.hotpepper.jp/CSP/kr/reserve/?storeId=H000405803" target="_blank" rel="noopener" class="btn btn-primary">ネットでご予約</a>
+        <a href="tel:054-655-2305" class="btn btn-tel">📞 054-655-2305</a>
+      </div>
+      <div class="hero-info">
+        <div class="hero-info-item"><strong>営業</strong>10:00 - 22:00（最終受付21:00）</div>
+        <div class="hero-info-item"><strong>当日予約</strong>歓迎いたします</div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <svg class="hero-deco-leaf" viewBox="0 0 100 100" fill="none">
+        <path d="M50 10 C 20 30, 20 70, 50 90 C 80 70, 80 30, 50 10 Z" fill="currentColor" opacity=".6"/>
+        <path d="M50 10 L50 90" stroke="#6B4D3A" stroke-width="1.5" opacity=".3"/>
+      </svg>
+      <div class="hero-image" role="img" aria-label="サロンの様子"></div>
+      <div class="hero-logo-float">
+        <img src="images/logo.jpg" alt="ととのう。ロゴ">
+      </div>
     </div>
   </div>
 </section>
 
-<!-- ===== CONCEPT ===== -->
-<section class="section concept" id="concept">
+<!-- ===== ABOUT ===== -->
+<section class="section about" id="about">
   <div class="wrap">
-    <span class="section-label en">Concept</span>
-    <h2 class="section-title">3つの強み</h2>
-    <p class="concept-intro">
-      日々の疲れを抱えるあなたへ。<br>
-      静かに流れる時間のなかで、心と体をゆっくりと解きほぐす。<br>
-      「ととのう。」は、そんなひとときをお届けする隠れ家サロンです。
+    <div class="section-label-wrap">
+      <span class="section-label">ABOUT</span>
+    </div>
+    <h2 class="section-title">小鳥のさえずりのように、<br>やさしく、しずかに。</h2>
+    <svg class="wave-divider" viewBox="0 0 120 14" fill="none">
+      <path d="M0,7 Q15,0 30,7 T60,7 T90,7 T120,7" stroke="#B8C97C" stroke-width="2" fill="none" stroke-linecap="round"/>
+    </svg>
+    <p class="about-intro" style="margin-top:32px">
+      「ととのう。」は、静岡市葵区瀬名川にある<strong>大人のためのリラクゼーションサロン</strong>です。<br>
+      派手さはありませんが、ひとつひとつの施術に心を込めて、<br>
+      お客様のからだとこころが、ゆっくりと<strong>ほぐれてゆく</strong>時間をお届けします。
     </p>
-    <div class="concept-grid">
-      <div class="concept-card">
-        <div class="concept-num en">01</div>
-        <h3>熟練の技術</h3>
-        <p>お客様一人ひとりのお身体の状態に合わせた、深圧の手技。経験を重ねたスタッフが、凝りの根本にアプローチします。</p>
+
+    <div class="feature-grid">
+      <div class="feature-card">
+        <div class="feature-icon">🌿</div>
+        <h3>確かな技術と、ぬくもり</h3>
+        <p>経験を重ねたスタッフが、おひとりおひとりのお身体に合わせて丁寧に。痛いところ、つらいところに、やさしく届く施術です。</p>
       </div>
-      <div class="concept-card">
-        <div class="concept-num en">02</div>
-        <h3>夜まで営業</h3>
-        <p>最終受付21時。お仕事帰りでもゆっくりお立ち寄りいただけます。一日の終わりに、心地よい時間を。</p>
+      <div class="feature-card">
+        <div class="feature-icon">🌼</div>
+        <h3>夜21時まで受付</h3>
+        <p>営業は朝10時から夜22時まで（最終受付21時）。お仕事帰り、お買い物の帰りにも、ふらりとお立ち寄りいただけます。</p>
       </div>
-      <div class="concept-card">
-        <div class="concept-num en">03</div>
-        <h3>当日予約OK</h3>
-        <p>前日・当日のお急ぎのご予約も歓迎いたします。「今、行きたい」その気持ちにお応えします。</p>
+      <div class="feature-card">
+        <div class="feature-icon">🐦</div>
+        <h3>当日・前日もご予約OK</h3>
+        <p>「今日のうちに行きたい」「明日空いてるかしら」そんなお気持ちにも、できる限りお応えします。お電話一本でお気軽に。</p>
       </div>
     </div>
   </div>
 </section>
 
 <!-- ===== MENU ===== -->
-<section class="section menu" id="menu">
+<section class="section menu-section" id="menu">
   <div class="wrap">
-    <span class="section-label en">Menu</span>
+    <div class="section-label-wrap">
+      <span class="section-label">MENU</span>
+    </div>
     <h2 class="section-title">メニュー・料金</h2>
+    <svg class="wave-divider" viewBox="0 0 120 14" fill="none">
+      <path d="M0,7 Q15,0 30,7 T60,7 T90,7 T120,7" stroke="#E89AAB" stroke-width="2" fill="none" stroke-linecap="round"/>
+    </svg>
+    <p class="section-sub" style="margin-top:24px">
+      お身体の状態とご希望にあわせて、お好みのコースをお選びください。<br>
+      初めての方には、スタンダードコースもおすすめです。
+    </p>
+
     <div class="menu-grid">
       <div class="menu-card">
         <div class="menu-card-img" style="background-image:url('images/menu1.jpg')"></div>
         <div class="menu-card-body">
-          <span class="menu-tag en">POPULAR</span>
-          <div class="menu-num en">MENU 01</div>
-          <h3>首肩こり解消コース<br><small style="font-size:13px;color:var(--text-soft);font-weight:400">もみほぐし45分＋ヘッド15分</small></h3>
+          <span class="menu-tag">人気No.1</span>
+          <h3>首肩こり解消コース<small>もみほぐし45分＋ヘッド15分</small></h3>
           <p class="menu-desc">デスクワークやスマホで凝り固まった首肩を中心に、ヘッドマッサージで頭部までしっかり解放。眼精疲労にもおすすめです。</p>
           <div class="menu-price">
-            <span class="menu-price-label en">60min</span>
+            <span class="menu-price-label">60分</span>
             <span class="menu-price-value">¥4,400</span>
           </div>
-          <a href="https://beauty.hotpepper.jp/CSP/kr/reserve/?storeId=H000405803" target="_blank" rel="noopener" class="btn btn-outline">予約する</a>
+          <a href="https://beauty.hotpepper.jp/CSP/kr/reserve/?storeId=H000405803" target="_blank" rel="noopener" class="btn btn-outline">このコースを予約</a>
         </div>
       </div>
 
       <div class="menu-card">
         <div class="menu-card-img" style="background-image:url('images/menu2.jpg')"></div>
         <div class="menu-card-body">
-          <div class="menu-num en">MENU 02</div>
-          <h3>全身もみほぐし<br><small style="font-size:13px;color:var(--text-soft);font-weight:400">ゆったり90分コース</small></h3>
+          <h3>全身もみほぐし<small>ゆったり90分コース</small></h3>
           <p class="menu-desc">全身をくまなくじっくりと。気になる部位を重点的にお時間配分し、深い満足感のあるお時間をご提供します。</p>
           <div class="menu-price">
-            <span class="menu-price-label en">90min</span>
+            <span class="menu-price-label">90分</span>
             <span class="menu-price-value">¥6,000</span>
           </div>
-          <a href="https://beauty.hotpepper.jp/CSP/kr/reserve/?storeId=H000405803" target="_blank" rel="noopener" class="btn btn-outline">予約する</a>
+          <a href="https://beauty.hotpepper.jp/CSP/kr/reserve/?storeId=H000405803" target="_blank" rel="noopener" class="btn btn-outline">このコースを予約</a>
         </div>
       </div>
 
       <div class="menu-card">
         <div class="menu-card-img" style="background-image:url('images/menu7.jpg')"></div>
         <div class="menu-card-body">
-          <span class="menu-tag en">RECOMMEND</span>
-          <div class="menu-num en">MENU 03</div>
-          <h3>からだ回復コース<br><small style="font-size:13px;color:var(--text-soft);font-weight:400">全身もみほぐし30分＋リンパ60分</small></h3>
+          <span class="menu-tag recommend">おすすめ</span>
+          <h3>からだ回復コース<small>全身もみほぐし30分＋リンパ60分</small></h3>
           <p class="menu-desc">凝りをほぐし、リンパで老廃物を流す贅沢な90分。むくみ・冷え・疲労感に。心身ともに回復したい方へ。</p>
           <div class="menu-price">
-            <span class="menu-price-label en">90min</span>
+            <span class="menu-price-label">90分</span>
             <span class="menu-price-value">¥8,000</span>
           </div>
-          <a href="https://beauty.hotpepper.jp/CSP/kr/reserve/?storeId=H000405803" target="_blank" rel="noopener" class="btn btn-outline">予約する</a>
+          <a href="https://beauty.hotpepper.jp/CSP/kr/reserve/?storeId=H000405803" target="_blank" rel="noopener" class="btn btn-outline">このコースを予約</a>
         </div>
       </div>
 
       <div class="menu-card">
         <div class="menu-card-img" style="background-image:url('images/menu6.jpg')"></div>
         <div class="menu-card-body">
-          <div class="menu-num en">MENU 04</div>
-          <h3>足つぼコース<br><small style="font-size:13px;color:var(--text-soft);font-weight:400">もみほぐし30分＋足つぼ30分</small></h3>
+          <h3>足つぼコース<small>もみほぐし30分＋足つぼ30分</small></h3>
           <p class="menu-desc">立ち仕事や歩き疲れに。全身のもみほぐしと足裏の反射区刺激で、巡りを整え軽やかな足取りへ導きます。</p>
           <div class="menu-price">
-            <span class="menu-price-label en">60min</span>
+            <span class="menu-price-label">60分</span>
             <span class="menu-price-value">¥5,000</span>
           </div>
-          <a href="https://beauty.hotpepper.jp/CSP/kr/reserve/?storeId=H000405803" target="_blank" rel="noopener" class="btn btn-outline">予約する</a>
+          <a href="https://beauty.hotpepper.jp/CSP/kr/reserve/?storeId=H000405803" target="_blank" rel="noopener" class="btn btn-outline">このコースを予約</a>
         </div>
       </div>
 
       <div class="menu-card">
         <div class="menu-card-img" style="background-image:url('images/menu5.jpg')"></div>
         <div class="menu-card-body">
-          <div class="menu-num en">MENU 05</div>
-          <h3>もみほぐし60分<br><small style="font-size:13px;color:var(--text-soft);font-weight:400">スタンダードコース</small></h3>
+          <h3>もみほぐし60分<small>スタンダードコース</small></h3>
           <p class="menu-desc">気になる部位を中心にじっくりとほぐすベーシックコース。初めての方やお時間の限られた方にもおすすめです。</p>
           <div class="menu-price">
-            <span class="menu-price-label en">60min</span>
+            <span class="menu-price-label">60分</span>
             <span class="menu-price-value">¥4,200</span>
           </div>
-          <a href="https://beauty.hotpepper.jp/CSP/kr/reserve/?storeId=H000405803" target="_blank" rel="noopener" class="btn btn-outline">予約する</a>
+          <a href="https://beauty.hotpepper.jp/CSP/kr/reserve/?storeId=H000405803" target="_blank" rel="noopener" class="btn btn-outline">このコースを予約</a>
         </div>
       </div>
 
       <div class="menu-card">
         <div class="menu-card-img" style="background-image:url('images/menu4.jpg')"></div>
         <div class="menu-card-body">
-          <div class="menu-num en">MENU 06</div>
-          <h3>もみほぐし90分＋ハンド<br><small style="font-size:13px;color:var(--text-soft);font-weight:400">90分＋ハンド30分</small></h3>
+          <h3>もみほぐし90分＋ハンド<small>90分＋ハンド30分</small></h3>
           <p class="menu-desc">全身90分のもみほぐしに加え、手・腕の疲れを丁寧にほぐすハンドケアを30分プラス。指先まで贅沢な癒しを。</p>
           <div class="menu-price">
-            <span class="menu-price-label en">120min</span>
+            <span class="menu-price-label">120分</span>
             <span class="menu-price-value">¥8,800</span>
           </div>
-          <a href="https://beauty.hotpepper.jp/CSP/kr/reserve/?storeId=H000405803" target="_blank" rel="noopener" class="btn btn-outline">予約する</a>
+          <a href="https://beauty.hotpepper.jp/CSP/kr/reserve/?storeId=H000405803" target="_blank" rel="noopener" class="btn btn-outline">このコースを予約</a>
         </div>
       </div>
 
       <div class="menu-card">
         <div class="menu-card-img" style="background-image:url('images/menu3.jpg')"></div>
         <div class="menu-card-body">
-          <span class="menu-tag en">PREMIUM</span>
-          <div class="menu-num en">MENU 07</div>
-          <h3>もみほぐし＋リンパ<br><small style="font-size:13px;color:var(--text-soft);font-weight:400">もみほぐし60分＋リンパ60分</small></h3>
+          <span class="menu-tag premium">プレミアム</span>
+          <h3>もみほぐし＋リンパ<small>もみほぐし60分＋リンパ60分</small></h3>
           <p class="menu-desc">深圧のもみほぐしと優しいリンパケアの組合せ。たっぷり120分の特別な時間で、心身ともに完全リセット。</p>
           <div class="menu-price">
-            <span class="menu-price-label en">120min</span>
+            <span class="menu-price-label">120分</span>
             <span class="menu-price-value">¥9,200</span>
           </div>
-          <a href="https://beauty.hotpepper.jp/CSP/kr/reserve/?storeId=H000405803" target="_blank" rel="noopener" class="btn btn-outline">予約する</a>
+          <a href="https://beauty.hotpepper.jp/CSP/kr/reserve/?storeId=H000405803" target="_blank" rel="noopener" class="btn btn-outline">このコースを予約</a>
         </div>
       </div>
     </div>
-    <p class="menu-note">※ コース時間は <strong>45分〜120分</strong> からお選びいただけます</p>
+    <div class="menu-note-wrap">
+      <span class="menu-note">※ コース時間は <strong>45分〜120分</strong> からお選びいただけます</span>
+    </div>
   </div>
 </section>
 
 <!-- ===== FLOW ===== -->
-<section class="section flow" id="flow">
+<section class="section flow-section" id="flow">
   <div class="wrap">
-    <span class="section-label en">Flow</span>
+    <div class="section-label-wrap">
+      <span class="section-label">FLOW</span>
+    </div>
     <h2 class="section-title">来店の流れ</h2>
-    <div class="flow-layout">
-      <div class="flow-mascot" aria-label="ととのう。マスコット"></div>
-      <div class="flow-grid">
-        <div class="flow-step">
-          <div class="flow-icon"><svg viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 10l9-7 9 7v11a2 2 0 01-2 2h-3v-9h-8v9H5a2 2 0 01-2-2V10z"/><circle cx="12" cy="14" r="2.5"/></svg></div>
-          <div class="flow-num en">STEP 01</div><h4>ご予約</h4>
-        </div>
-        <div class="flow-step">
-          <div class="flow-icon"><svg viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 21h18M5 21V7l7-4 7 4v14M9 21v-6h6v6"/></svg></div>
-          <div class="flow-num en">STEP 02</div><h4>ご来店</h4>
-        </div>
-        <div class="flow-step">
-          <div class="flow-icon"><svg viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M21 11.5c0 4.5-4 8-9 8-1.3 0-2.5-.2-3.6-.6L3 21l1.4-4.4C3.5 15.3 3 13.5 3 11.5c0-4.5 4-8 9-8s9 3.5 9 8z"/></svg></div>
-          <div class="flow-num en">STEP 03</div><h4>カウンセリング</h4>
-        </div>
-        <div class="flow-step">
-          <div class="flow-icon"><svg viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M16 4l4 3v5l-3 2v8H7v-8l-3-2V7l4-3M9 4l3 3 3-3"/></svg></div>
-          <div class="flow-num en">STEP 04</div><h4>お着替え</h4>
-        </div>
-        <div class="flow-step">
-          <div class="flow-icon"><svg viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 14h14M5 14v6h14v-6M5 14V9a3 3 0 016 0M19 14V9a3 3 0 00-6 0"/><circle cx="8" cy="9" r="1.5"/><circle cx="16" cy="9" r="1.5"/></svg></div>
-          <div class="flow-num en">STEP 05</div><h4>施術</h4>
-        </div>
-        <div class="flow-step">
-          <div class="flow-icon"><svg viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 12.5c0 4-3.5 7.5-7.5 7.5S4.5 16.5 4.5 12.5c0-3 2-5.5 4.5-6.5C9 4 10 3 12 3s3 1 3 3c2.5 1 4.5 3.5 4.5 6.5z"/><path stroke-linecap="round" stroke-linejoin="round" d="M9 13l2 2 4-4"/></svg></div>
-          <div class="flow-num en">STEP 06</div><h4>仕上げ</h4>
-        </div>
-        <div class="flow-step">
-          <div class="flow-icon"><svg viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg></div>
-          <div class="flow-num en">STEP 07</div><h4>リラックス</h4>
-        </div>
-        <div class="flow-step">
-          <div class="flow-icon"><svg viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 12h14M13 6l6 6-6 6M21 4v16"/></svg></div>
-          <div class="flow-num en">STEP 08</div><h4>お見送り</h4>
-        </div>
+    <svg class="wave-divider" viewBox="0 0 120 14" fill="none">
+      <path d="M0,7 Q15,0 30,7 T60,7 T90,7 T120,7" stroke="#D4B844" stroke-width="2" fill="none" stroke-linecap="round"/>
+    </svg>
+    <p class="section-sub" style="margin-top:24px">
+      初めての方も、安心してお越しください。
+    </p>
+
+    <div class="flow-grid">
+      <div class="flow-step">
+        <div class="flow-icon-circle">1</div>
+        <h4>ご予約</h4>
+        <p>ネット・お電話で<br>お気軽に</p>
+      </div>
+      <div class="flow-step">
+        <div class="flow-icon-circle">2</div>
+        <h4>ご来店</h4>
+        <p>瀬名川北街道沿い<br>駐車場あり</p>
+      </div>
+      <div class="flow-step">
+        <div class="flow-icon-circle">3</div>
+        <h4>カウンセリング</h4>
+        <p>お悩み・体調を<br>お聞きします</p>
+      </div>
+      <div class="flow-step">
+        <div class="flow-icon-circle">4</div>
+        <h4>お着替え</h4>
+        <p>専用ウェアを<br>ご用意</p>
+      </div>
+      <div class="flow-step">
+        <div class="flow-icon-circle">5</div>
+        <h4>施術</h4>
+        <p>心地よい時間を<br>ゆったりと</p>
+      </div>
+      <div class="flow-step">
+        <div class="flow-icon-circle">6</div>
+        <h4>仕上げ</h4>
+        <p>背中・足元まで<br>丁寧に</p>
+      </div>
+      <div class="flow-step">
+        <div class="flow-icon-circle">7</div>
+        <h4>ご休憩</h4>
+        <p>温かいお茶を<br>お出しします</p>
+      </div>
+      <div class="flow-step">
+        <div class="flow-icon-circle">8</div>
+        <h4>お見送り</h4>
+        <p>またのご来店を<br>お待ちしております</p>
       </div>
     </div>
   </div>
 </section>
 
 <!-- ===== VOICE ===== -->
-<section class="section voice" id="voice">
+<section class="section voice-section" id="voice">
   <div class="wrap">
-    <span class="section-label en">Customer's Voice</span>
+    <div class="section-label-wrap">
+      <span class="section-label">VOICE</span>
+    </div>
     <h2 class="section-title">お客様の声</h2>
+    <svg class="wave-divider" viewBox="0 0 120 14" fill="none">
+      <path d="M0,7 Q15,0 30,7 T60,7 T90,7 T120,7" stroke="#B68CBF" stroke-width="2" fill="none" stroke-linecap="round"/>
+    </svg>
 
-    <div class="voice-rating">
+    <div class="voice-rating" style="margin-top:40px">
       <div class="voice-rating-num">4.89</div>
       <div class="voice-stars">★★★★★</div>
       <div class="voice-rating-meta">ホットペッパービューティー口コミ評価<br><strong>72件</strong>のレビューより</div>
@@ -903,7 +1199,7 @@ button{font-family:inherit;cursor:pointer;border:none;background:none}
       <div class="voice-card">
         <div class="voice-stars-small">★★★★★</div>
         <p class="voice-text">むくみがひどくて回復コースを受けました。施術後は脚がすっきりして驚きました。スタッフの方も丁寧で、また来たいと思える素敵なお店です。</p>
-        <div class="voice-meta">40代・女性／パート</div>
+        <div class="voice-meta">50代・女性／パート</div>
       </div>
     </div>
 
@@ -914,87 +1210,97 @@ button{font-family:inherit;cursor:pointer;border:none;background:none}
 </section>
 
 <!-- ===== GALLERY ===== -->
-<section class="section gallery" id="gallery">
+<section class="section gallery-section" id="gallery">
   <div class="wrap">
-    <span class="section-label en">Gallery</span>
-    <h2 class="section-title">サロンの雰囲気</h2>
+    <div class="section-label-wrap">
+      <span class="section-label">GALLERY</span>
+    </div>
+    <h2 class="section-title">サロンの<span class="accent-pink">雰囲気</span></h2>
+    <svg class="wave-divider" viewBox="0 0 120 14" fill="none">
+      <path d="M0,7 Q15,0 30,7 T60,7 T90,7 T120,7" stroke="#E89AAB" stroke-width="2" fill="none" stroke-linecap="round"/>
+    </svg>
+    <p class="section-sub" style="margin-top:24px">
+      やわらかな光と木のぬくもり。落ち着いた個室空間でお寛ぎください。
+    </p>
     <div class="gallery-grid">
       <div class="gallery-item" style="background-image:url('images/main3.jpg')"></div>
-      <div class="gallery-item" style="background-image:url('images/gallery8.jpg')"></div>
+      <div class="gallery-item" style="background-image:url('images/gallery1.jpg')"></div>
       <div class="gallery-item" style="background-image:url('images/main2.jpg')"></div>
       <div class="gallery-item" style="background-image:url('images/gallery5.jpg')"></div>
       <div class="gallery-item" style="background-image:url('images/gallery6.jpg')"></div>
       <div class="gallery-item" style="background-image:url('images/gallery7.jpg')"></div>
+      <div class="gallery-item" style="background-image:url('images/gallery3.jpg')"></div>
+      <div class="gallery-item" style="background-image:url('images/gallery4.jpg')"></div>
     </div>
   </div>
 </section>
 
 <!-- ===== STAFF ===== -->
-<section class="section staff" id="staff">
+<section class="section staff-section" id="staff">
   <div class="wrap">
-    <span class="section-label en">Staff</span>
+    <div class="section-label-wrap">
+      <span class="section-label">STAFF</span>
+    </div>
     <h2 class="section-title">スタッフ紹介</h2>
+    <svg class="wave-divider" viewBox="0 0 120 14" fill="none">
+      <path d="M0,7 Q15,0 30,7 T60,7 T90,7 T120,7" stroke="#B8C97C" stroke-width="2" fill="none" stroke-linecap="round"/>
+    </svg>
+    <p class="section-sub" style="margin-top:24px">
+      心を込めた施術で、お客様をお迎えいたします。
+    </p>
+
     <div class="staff-grid">
       <div class="staff-card">
         <div class="staff-photo" style="background-image:url('images/staff-suzuki.jpg')"></div>
         <h4>スズキ</h4>
-        <div class="staff-en">SUZUKI</div>
-        <p class="staff-info">丁寧な施術で心と体をととのえます。お悩みに寄り添ったケアを。</p>
+        <p class="staff-info">丁寧な施術で、心と体をととのえます。お悩みに寄り添ったケアを。</p>
         <span class="staff-tag">セラピスト</span>
       </div>
       <div class="staff-card">
         <div class="staff-photo" style="background-image:url('images/staff-masui.jpg')"></div>
         <h4>マスイ</h4>
-        <div class="staff-en">MASUI</div>
         <p class="staff-info">男性スタッフによる力強い深圧。しっかり凝りをほぐします。</p>
         <span class="staff-tag male">セラピスト</span>
       </div>
       <div class="staff-card">
         <div class="staff-photo" style="background-image:url('images/staff-oi.jpg')"></div>
         <h4>大井</h4>
-        <div class="staff-en">OI</div>
         <p class="staff-info">お客様一人ひとりの声に耳を傾け、ベストな施術をご提供します。</p>
         <span class="staff-tag">セラピスト</span>
       </div>
       <div class="staff-card">
-        <div class="staff-photo en">O</div>
+        <div class="staff-photo initial">オ</div>
         <h4>オノダ</h4>
-        <div class="staff-en">ONODA</div>
         <p class="staff-info">リンパのつまりを解消いたします。むくみが気になる方に。</p>
         <span class="staff-tag">セラピスト</span>
       </div>
       <div class="staff-card">
-        <div class="staff-photo en">O</div>
+        <div class="staff-photo initial">オ</div>
         <h4>オオタ</h4>
-        <div class="staff-en">OTA</div>
         <p class="staff-info">強押し対応します。丁寧に施術することを心がけています。</p>
         <span class="staff-tag">セラピスト</span>
       </div>
       <div class="staff-card">
-        <div class="staff-photo en">K</div>
+        <div class="staff-photo initial">コ</div>
         <h4>コタケ</h4>
-        <div class="staff-en">KOTAKE</div>
         <p class="staff-info">コリの解消を一緒にめざしましょう。強押しも対応可能です。</p>
         <span class="staff-tag">セラピスト</span>
       </div>
       <div class="staff-card">
-        <div class="staff-photo en">M</div>
+        <div class="staff-photo initial">舞</div>
         <h4>舞</h4>
-        <div class="staff-en">MAI</div>
-        <p class="staff-info">リンパケアが得意です！全身の巡りを整え軽やかに。</p>
+        <p class="staff-info">リンパケアが得意です。全身の巡りを整え、軽やかに。</p>
         <span class="staff-tag">セラピスト</span>
       </div>
       <div class="staff-card">
-        <div class="staff-photo en">T</div>
+        <div class="staff-photo initial">ト</div>
         <h4>トザワ</h4>
-        <div class="staff-en">TOZAWA</div>
-        <p class="staff-info">指名のお客様も多数。確かな技術でお応えします。<br><small style="color:var(--gold)">※指名料 ¥300</small></p>
+        <p class="staff-info">指名のお客様も多数。確かな技術でお応えします。<br><small>※指名料 ¥300</small></p>
         <span class="staff-tag male">セラピスト</span>
       </div>
       <div class="staff-card">
-        <div class="staff-photo en">M</div>
+        <div class="staff-photo initial">萌</div>
         <h4>萌子</h4>
-        <div class="staff-en">MOEKO</div>
         <p class="staff-info">心地よい時間をお届けします。リフレッシュをご一緒に。</p>
         <span class="staff-tag">セラピスト</span>
       </div>
@@ -1002,14 +1308,45 @@ button{font-family:inherit;cursor:pointer;border:none;background:none}
   </div>
 </section>
 
-<!-- ===== RECRUIT ===== -->
-<section class="section recruit" id="recruit">
+<!-- ===== RESERVATION ===== -->
+<section class="section reservation-section" id="reservation">
   <div class="wrap">
-    <span class="section-label en">Recruit</span>
-    <h2 class="section-title">求人募集</h2>
+    <div class="section-label-wrap">
+      <span class="section-label">RESERVATION</span>
+    </div>
+    <h2 class="section-title">ご予約・お問い合わせ</h2>
+    <svg class="wave-divider" viewBox="0 0 120 14" fill="none">
+      <path d="M0,7 Q15,0 30,7 T60,7 T90,7 T120,7" stroke="#E89AAB" stroke-width="2" fill="none" stroke-linecap="round"/>
+    </svg>
+    <p class="reservation-intro" style="margin-top:32px">
+      ご予約はホットペッパービューティー、またはお電話にて承っております。<br>
+      ご不明な点がございましたら、お気軽にお問い合わせください。
+    </p>
+    <div class="reservation-buttons">
+      <a href="https://beauty.hotpepper.jp/CSP/kr/reserve/?storeId=H000405803" target="_blank" rel="noopener" class="btn btn-primary">ホットペッパーで予約</a>
+      <a href="tel:054-655-2305" class="btn btn-tel">📞 054-655-2305</a>
+    </div>
+    <p class="reservation-note">営業時間 10:00 - 22:00（最終受付21:00）／当日・前日予約歓迎</p>
+  </div>
+</section>
+
+<!-- ===== RECRUIT ===== -->
+<section class="section recruit-section" id="recruit">
+  <div class="wrap">
+    <div class="section-label-wrap">
+      <span class="section-label">RECRUIT</span>
+    </div>
+    <h2 class="section-title">スタッフ募集中</h2>
+    <svg class="wave-divider" viewBox="0 0 120 14" fill="none">
+      <path d="M0,7 Q15,0 30,7 T60,7 T90,7 T120,7" stroke="#D4B844" stroke-width="2" fill="none" stroke-linecap="round"/>
+    </svg>
+    <p class="section-sub" style="margin-top:24px">
+      明るく、あたたかい雰囲気のサロンで、一緒に働きませんか。
+    </p>
+
     <div class="recruit-grid">
       <div class="recruit-card">
-        <span class="recruit-tag en">PART TIME</span>
+        <span class="recruit-tag">PART TIME</span>
         <h3>パートタイム</h3>
         <ul>
           <li><strong>勤務時間</strong>週2日〜・1日4時間〜OK</li>
@@ -1019,7 +1356,7 @@ button{font-family:inherit;cursor:pointer;border:none;background:none}
         </ul>
       </div>
       <div class="recruit-card">
-        <span class="recruit-tag en">FULL TIME</span>
+        <span class="recruit-tag">FULL TIME</span>
         <h3>フルタイム</h3>
         <ul>
           <li><strong>勤務時間</strong>週5日・実働8時間</li>
@@ -1030,47 +1367,48 @@ button{font-family:inherit;cursor:pointer;border:none;background:none}
       </div>
     </div>
     <div class="recruit-cta">
-      <a href="https://work.beauty.hotpepper.jp/WC00021669/WS0000051833/" target="_blank" rel="noopener" class="btn btn-gold">求人詳細を見る</a>
-    </div>
-  </div>
-</section>
-
-<!-- ===== LINE ===== -->
-<section class="section line-section" id="line">
-  <div class="wrap">
-    <span class="section-label en">Reservation</span>
-    <h2 class="section-title">ご予約・お問い合わせ</h2>
-    <p class="line-intro">
-      LINEからのお問い合わせ・ご予約も受け付けております。<br>
-      お気軽にお問い合わせください。
-    </p>
-    <div class="line-buttons">
-      <a href="#" class="btn btn-line">LINEで予約・お問い合わせ</a>
-      <a href="https://beauty.hotpepper.jp/CSP/kr/reserve/?storeId=H000405803" target="_blank" rel="noopener" class="btn btn-gold">ホットペッパーで予約</a>
+      <a href="https://work.beauty.hotpepper.jp/WC00021669/WS0000051833/" target="_blank" rel="noopener" class="btn btn-primary">求人詳細を見る</a>
     </div>
   </div>
 </section>
 
 <!-- ===== ACCESS ===== -->
-<section class="section access" id="access">
+<section class="section access-section" id="access">
   <div class="wrap">
-    <span class="section-label en">Access</span>
+    <div class="section-label-wrap">
+      <span class="section-label">ACCESS</span>
+    </div>
     <h2 class="section-title">アクセス</h2>
-    <div class="access-grid">
+    <svg class="wave-divider" viewBox="0 0 120 14" fill="none">
+      <path d="M0,7 Q15,0 30,7 T60,7 T90,7 T120,7" stroke="#B8C97C" stroke-width="2" fill="none" stroke-linecap="round"/>
+    </svg>
+    <div class="access-grid" style="margin-top:48px">
       <div class="access-info">
         <dl>
-          <dt class="en">SALON NAME</dt>
-          <dd>ととのう。</dd>
-          <dt class="en">ADDRESS</dt>
-          <dd>〒420-0913<br>静岡県静岡市葵区瀬名川２丁目３９－２８</dd>
-          <dt class="en">ACCESS</dt>
-          <dd>鳥坂IC下りてすぐ／瀬名川北街道沿い</dd>
-          <dt class="en">OPEN</dt>
-          <dd>10:00〜22:00（最終受付21:00）<br>当日・前日予約歓迎</dd>
-          <dt class="en">RESERVATION</dt>
-          <dd>
-            <a href="https://beauty.hotpepper.jp/CSP/kr/reserve/?storeId=H000405803" target="_blank" rel="noopener" style="color:var(--gold);border-bottom:1px solid var(--gold)">ホットペッパービューティーで予約 →</a>
-          </dd>
+          <div>
+            <dt>サロン名</dt>
+            <dd><strong>ととのう。</strong></dd>
+          </div>
+          <div>
+            <dt>住所</dt>
+            <dd>〒420-0913<br>静岡県静岡市葵区瀬名川２丁目３９－２８</dd>
+          </div>
+          <div>
+            <dt>アクセス</dt>
+            <dd>鳥坂IC下りてすぐ／瀬名川北街道沿い</dd>
+          </div>
+          <div>
+            <dt>営業時間</dt>
+            <dd>10:00 - 22:00（最終受付21:00）<br>当日・前日予約歓迎</dd>
+          </div>
+          <div>
+            <dt>お電話</dt>
+            <dd><a href="tel:054-655-2305">054-655-2305</a></dd>
+          </div>
+          <div>
+            <dt>ご予約</dt>
+            <dd><a href="https://beauty.hotpepper.jp/CSP/kr/reserve/?storeId=H000405803" target="_blank" rel="noopener">ホットペッパービューティーで予約 →</a></dd>
+          </div>
         </dl>
       </div>
       <div class="access-map">
@@ -1085,21 +1423,28 @@ button{font-family:inherit;cursor:pointer;border:none;background:none}
   <div class="wrap">
     <div class="footer-top">
       <div class="footer-brand">
-        <a href="#top" class="logo">ととのう<span class="dot">。</span></a>
-        <p>静岡県静岡市葵区瀬名川2丁目39-28<br>10:00〜22:00（最終受付21:00）／当日・前日予約歓迎<br>リラク・整体・エステ</p>
+        <a href="#top" class="logo-link">
+          <img src="images/logo.jpg" alt="ととのう。" class="logo-img">
+          <div>
+            <div class="logo-text">ととのう<span class="dot">。</span></div>
+            <div class="logo-sub">SHIZUOKA RELAXATION</div>
+          </div>
+        </a>
+        <p>静岡県静岡市葵区瀬名川２丁目３９－２８<br>10:00 - 22:00（最終受付21:00）<br>当日・前日予約歓迎</p>
       </div>
       <div>
-        <h5 class="en">MENU</h5>
+        <h5>MENU</h5>
         <ul>
-          <li><a href="#concept">コンセプト</a></li>
+          <li><a href="#about">お店紹介</a></li>
           <li><a href="#menu">メニュー・料金</a></li>
           <li><a href="#flow">来店の流れ</a></li>
           <li><a href="#voice">お客様の声</a></li>
         </ul>
       </div>
       <div>
-        <h5 class="en">INFORMATION</h5>
+        <h5>INFORMATION</h5>
         <ul>
+          <li><a href="#gallery">ギャラリー</a></li>
           <li><a href="#staff">スタッフ紹介</a></li>
           <li><a href="#recruit">求人募集</a></li>
           <li><a href="#access">アクセス</a></li>
@@ -1108,16 +1453,16 @@ button{font-family:inherit;cursor:pointer;border:none;background:none}
       </div>
     </div>
     <div class="footer-bottom">
-      <div class="footer-copy en">© 2026 TOTONOU. All Rights Reserved.</div>
-      <a href="https://beauty.hotpepper.jp/kr/slnH000405803/" target="_blank" rel="noopener" class="footer-hpb">Hot Pepper Beauty →</a>
+      <div>© 2026 ととのう。 All Rights Reserved.</div>
+      <a href="https://beauty.hotpepper.jp/kr/slnH000405803/" target="_blank" rel="noopener">Hot Pepper Beauty →</a>
     </div>
   </div>
 </footer>
 
 <!-- ===== FAB (Mobile) ===== -->
 <div class="fab">
+  <a href="tel:054-655-2305" class="fab-tel">電話</a>
   <a href="https://beauty.hotpepper.jp/CSP/kr/reserve/?storeId=H000405803" target="_blank" rel="noopener" class="fab-hpb">予約</a>
-  <a href="#" class="fab-line">LINE</a>
 </div>
 
 <script>
@@ -1152,9 +1497,28 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
     const t = document.querySelector(id);
     if (!t) return;
     e.preventDefault();
-    const top = t.getBoundingClientRect().top + window.scrollY - 70;
+    const top = t.getBoundingClientRect().top + window.scrollY - 80;
     window.scrollTo({ top, behavior: 'smooth' });
   });
+});
+
+// Fade-in on scroll
+const observerOptions = { threshold: 0.1, rootMargin: '0px 0px -50px 0px' };
+const fadeObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.style.opacity = '1';
+      entry.target.style.transform = 'translateY(0)';
+      fadeObserver.unobserve(entry.target);
+    }
+  });
+}, observerOptions);
+
+document.querySelectorAll('.feature-card, .menu-card, .flow-step, .voice-card, .gallery-item, .staff-card, .recruit-card').forEach(el => {
+  el.style.opacity = '0';
+  el.style.transform = 'translateY(20px)';
+  el.style.transition = 'opacity .8s ease, transform .8s ease';
+  fadeObserver.observe(el);
 });
 </script>
 
